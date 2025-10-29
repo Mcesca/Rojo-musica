@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROJO - Histórico</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Navbar vertical -->
+        <nav class="navbar">
+            <div id="connect-container">
+                <input type="text" id="server-input" placeholder="http://127.0.0.1:5000/mateus" value="http://127.0.0.1:5000/mateus">
+                <button id="connect-btn">Conectar Servidor</button>
+            </div>
+            <div class="navbar-item" data-page="/">Início</div>
+            <div class="navbar-item" data-page="/artistas">Artistas</div>
+            <div class="navbar-item active" data-page="/historico">Histórico</div>
+        </nav>
+
+        <!-- Conteúdo principal -->
+        <main class="main-content">
+            <h1 class="title">HISTÓRICO</h1>
+            
+            <!-- Botões de controle do histórico -->
+            <div class="history-controls">
+                <button id="refresh-history" class="favorites-btn">
+                    Atualizar
+                </button>
+                <button id="clear-history" class="favorites-btn clear-btn">
+                    Limpar Histórico
+                </button>
+            </div>
+
+            <!-- Mensagem de carregamento -->
+            <div id="loading" class="loading">
+                Carregando histórico de reproduções...
+            </div>
+
+            <!-- Mensagem de erro -->
+            <div id="error-message" class="error-message hidden">
+                Erro ao carregar histórico. Verifique a conexão com o servidor.
+            </div>
+
+            <!-- Mensagem de histórico vazio -->
+            <div id="empty-history" class="hidden empty-history">
+                <div class="empty-icon"></div>
+                <h2>Nenhuma música no histórico</h2>
+                <p>As músicas que você reproduzir aparecerão aqui.</p>
+            </div>
+
+            <!-- Lista de histórico -->
+            <div id="history-list" class="history-list hidden">
+                <!-- Histórico será carregado dinamicamente aqui -->
+            </div>
+
+            <!-- Estatísticas -->
+            <div id="history-stats" class="history-stats hidden">
+                <!-- Estatísticas serão carregadas dinamicamente aqui -->
+            </div>
+        </main>
+    </div>
+
+    <!-- Player em tela cheia -->
+    <div id="fullscreen-player" class="fullscreen-player">
+        <button class="close-player" id="close-player">Voltar</button>
+        
+        <div class="player-cover" id="player-cover">
+            <div class="default-cover">Música</div>
+        </div>
+        
+        <div class="player-info">
+            <div class="player-title" id="player-title">Título da Música</div>
+            <div class="player-artist" id="player-artist">Artista</div>
+            <div class="player-format" id="player-format"></div>
+            <div class="player-status" id="player-status"></div>
+        </div>
+
+        <div class="player-controls">
+            <button class="control-btn" id="prev-btn">Anterior</button>
+            <button class="control-btn play-pause" id="play-pause-btn">Reproduzir</button>
+            <button class="control-btn" id="next-btn">Próxima</button>
+            <button class="control-btn favorite-btn" id="player-favorite-btn">Favorito</button>
+        </div>
+
+        <div class="progress-container" id="progress-container">
+            <div class="progress-bar" id="progress-bar"></div>
+        </div>
+
+        <div class="time-display">
+            <span id="current-time">0:00</span> / <span id="duration">0:00</span>
+        </div>
+
+        <!-- Elemento de áudio -->
+        <audio id="audio-player" preload="auto"></audio>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

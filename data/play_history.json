@@ -1,0 +1,38 @@
+[
+  {
+    "filename": "Billie Eilish - Therefore I Am (Official Music Video) - BillieEilishVEVO (youtube).mp3",
+    "title": "Therefore I Am (Official Music Video) - BillieEilishVEVO (youtube)",
+    "artist": "Billie Eilish",
+    "cover_url": "/static/images/billie .jpg",
+    "timestamp": "24/10/2025 14:39",
+    "played_at": "2025-10-24T14:39:26.805111",
+    "id": 4
+  },
+  {
+    "filename": "Billie Eilish - Therefore I Am (Official Music Video) - BillieEilishVEVO (youtube).mp3",
+    "title": "Therefore I Am (Official Music Video) - BillieEilishVEVO (youtube)",
+    "artist": "Billie Eilish",
+    "cover_url": "/static/images/therefore i am.jpg",
+    "timestamp": "17/10/2025 15:37",
+    "played_at": "2025-10-17T15:37:02.229112",
+    "id": 3
+  },
+  {
+    "filename": "Playboi Carti - Magnolia - PlayboiCartiVEVO (youtube).mp3",
+    "title": "Magnolia - PlayboiCartiVEVO (youtube)",
+    "artist": "Playboi Carti",
+    "cover_url": "/static/images/magnolia.jpg",
+    "timestamp": "17/10/2025 14:30",
+    "played_at": "2025-10-17T14:30:54.144790",
+    "id": 2
+  },
+  {
+    "filename": "Mustard - Ballin’ ft. Roddy Ricch - MustardVEVO (youtube).mp3",
+    "title": "Ballin’ ft. Roddy Ricch - MustardVEVO (youtube)",
+    "artist": "Mustard",
+    "cover_url": "/static/images/Mustard.jpg",
+    "timestamp": "17/10/2025 14:30",
+    "played_at": "2025-10-17T14:30:51.055412",
+    "id": 1
+  }
+]

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROJO - Músicas</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Navbar vertical -->
+        <nav class="navbar">
+            <div id="connect-container">
+                <input type="text" id="server-input" placeholder="http://127.0.0.1:5000/mateus" value="http://127.0.0.1:5000/mateus">
+                <button id="connect-btn">Conectar Servidor</button>
+            </div>
+            <div class="navbar-item active" data-page="/">Início</div>
+            <div class="navbar-item" data-page="/artistas">Artistas</div>
+            <div class="navbar-item" data-page="/historico">Histórico</div>
+        </nav>
+
+        <!-- Conteúdo principal -->
+        <main class="main-content">
+            <h1 class="title">ROJO</h1>
+            
+            <!-- Botão Favoritas -->
+            <button id="show-favorites" class="favorites-btn">
+                Músicas Favoritas
+            </button>
+
+            <!-- Mensagem de carregamento -->
+            <div id="loading" class="loading">
+                Conecte-se ao servidor para carregar as músicas...
+            </div>
+
+            <!-- Mensagem de erro -->
+            <div id="error-message" class="error-message hidden">
+                Erro ao conectar ao servidor. Verifique o endereço e tente novamente.
+            </div>
+
+
+
+            <!-- Carrossel de todas as músicas -->
+            <div class="artist-songs-section">
+                <h2 class="section-title">Todas as Músicas</h2>
+                <div id="music-carousel" class="music-carousel hidden">
+                    <!-- As músicas serão carregadas dinamicamente aqui -->
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Player em tela cheia -->
+    <div id="fullscreen-player" class="fullscreen-player">
+        <button class="close-player" id="close-player">Voltar</button>
+        
+        <div class="player-cover" id="player-cover">
+            <div class="default-cover">Música</div>
+        </div>
+        
+        <div class="player-info">
+            <div class="player-title" id="player-title">Título da Música</div>
+            <div class="player-artist" id="player-artist">Artista</div>
+            <div class="player-format" id="player-format"></div>
+            <div class="player-status" id="player-status"></div>
+        </div>
+
+        <div class="player-controls">
+            <button class="control-btn" id="prev-btn">Anterior</button>
+            <button class="control-btn play-pause" id="play-pause-btn">Reproduzir</button>
+            <button class="control-btn" id="next-btn">Próxima</button>
+            <button class="control-btn favorite-btn" id="player-favorite-btn">Favorito</button>
+        </div>
+
+        <div class="progress-container" id="progress-container">
+            <div class="progress-bar" id="progress-bar"></div>
+        </div>
+
+        <div class="time-display">
+            <span id="current-time">0:00</span> / <span id="duration">0:00</span>
+        </div>
+
+        <!-- Elemento de áudio -->
+        <audio id="audio-player" preload="auto"></audio>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
