@@ -1,2 +1,7 @@
-buildCommand: chmod +x build.sh && ./build.sh
-startCommand: gunicorn app:app
+services:
+  - type: web
+    name: rojo-music
+    env: python
+    pythonVersion: 3.11.4
+    buildCommand: chmod +x build.sh && ./build.sh
+    startCommand: gunicorn app:app
