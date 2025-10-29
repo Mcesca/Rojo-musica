@@ -2,8 +2,10 @@ services:
   - type: web
     name: rojo-music-player
     env: python
+    pythonVersion: 3.11.4
     buildCommand: "chmod +x build.sh && ./build.sh"
     startCommand: "gunicorn app:app"
     plan: free
+
 
 
