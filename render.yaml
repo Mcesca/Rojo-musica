@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: rojo-music-player
+    name: rojo-musica
     env: python
     buildCommand: "chmod +x build.sh && ./build.sh"
     startCommand: "venv/bin/gunicorn app:app"
