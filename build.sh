@@ -1,15 +1,10 @@
-#!/bin/bash
-echo "🚀 Iniciando build com Python 3.11..."
+#!/usr/bin/env bash
+set -o errexit  # Faz o build parar se houver erro
 
-# Instala Python 3.11
-apt-get update && apt-get install -y python3.11 python3.11-venv python3.11-dev
+# --- CORREÇÃO DO ERRO Pillow/__version__ ---
+pip install --upgrade pip setuptools wheel
+pip install "setuptools<75"  # evita bug no build do Pillow
+pip install Pillow==9.4.0 --only-binary=:all:
+# -------------------------------------------
 
-# Cria e ativa o ambiente virtual
-python3.11 -m venv venv
-source venv/bin/activate
-
-# Atualiza pip e instala dependências
-pip install --upgrade pip
 pip install -r requirements.txt
-
-echo "✅ Build finalizado com sucesso!"
