@@ -3,4 +3,4 @@ services:
     name: rojo-music
     env: python
     buildCommand: chmod +x build.sh && ./build.sh
-    startCommand: .venv/bin/gunicorn app:app
+    startCommand: gunicorn app:app
