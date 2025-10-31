@@ -2,6 +2,5 @@ services:
   - type: web
     name: rojo-music
     env: python
-    
-    buildCommand: pip install --upgrade pip setuptools wheel && pip install -r requirements.txt
+    buildCommand: chmod +x build.sh && ./build.sh
     startCommand: gunicorn app:app
