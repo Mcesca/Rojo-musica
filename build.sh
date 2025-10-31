@@ -2,7 +2,6 @@
 set -o errexit
 
 # O Render já configura o ambiente virtual e a versão do Python (via runtime.txt).
-# Não é necessário instalar o Python 3.11 manualmente ou criar o venv.
 
 echo "---- Atualizando pip e setuptools para evitar conflitos de build ----"
 # Atualiza o pip e o setuptools para versões que resolvem o problema de build
